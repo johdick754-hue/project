@@ -1,0 +1,760 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f2f7f8;
+}
+
+header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: white;
+}
+
+nav img {
+  width: 200px;
+}
+
+.navlinks {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.navlinks a {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+.navbuttons button {
+  font-size: 15px;
+  padding: 10px;
+  background-color: transparent;
+  border: 1pt solid black;
+  border-radius: 10px;
+}
+
+.navbuttons .button2 {
+  font-size: 15px;
+  padding: 10px;
+  border: 1pt solid black;
+  border-radius: 10px;
+  color: white;
+  background-color: black;
+}
+
+main {
+  margin-top: 200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.herotext {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.herotext h1 {
+  font-size: 50px;
+}
+
+.herotext p {
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.herobutton {
+  align-items: center;
+  display: flex;
+  gap: 2px;
+  background-color: #0089ff;
+  color: white;
+  border: none;
+  padding: 4px;
+  font-size: 20px;
+  border-radius: 25px;
+  transition: all 0.5s ease-in-out;
+}
+
+.herobutton:hover {
+  background-color: black;
+}
+
+button .flowers {
+  width: 25px;
+  transition: all 0.5s ease-in-out;
+  animation: spin 2s linear infinite;
+}
+
+.store {
+  display: flex;
+  gap: 20px;
+}
+
+.macbutton {
+  background-color: #122231;
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  gap: 6px;
+  padding: 12px;
+  border-radius: 12px;
+  transition: all 0.5s ease-in-out;
+}
+
+.playbutton {
+  background-color: #122231;
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  gap: 6px;
+  padding: 12px;
+  border-radius: 12px;
+  transition: all 0.5s ease-in-out;
+}
+
+.playbutton:hover {
+  transform: translateY(-4px);
+  background-color: black;
+}
+
+.macbutton:hover {
+  transform: translateY(-4px);
+  background-color: black;
+}
+
+.macbutton img {
+  width: 25px;
+}
+
+.herobanner img {
+  width: 500px;
+}
+
+.firstsection {
+  margin-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  gap: 30px;
+}
+
+.introanim {
+  margin-top: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.introanim h1 {
+  font-size: 50px;
+}
+
+.introanim p {
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.animationcards {
+  margin-top: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.animationcards div {
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 36px;
+}
+
+.animationcards span {
+  width: 500px;
+  height: 500px;
+  background: white;
+  border-radius: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 35px;
+  padding-bottom: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.span1:hover * {
+  color: white;
+}
+
+.span1 {
+  font-family: Arial, Helvetica, sans-serif;
+  transition: all 0.5s ease-in-out;
+}
+
+.span1:hover {
+  background: #0f60d6;
+}
+
+.span1 h1 {
+  font-size: 40px;
+  color: #003399;
+}
+
+.span1 p {
+  font-size: 25px;
+  color: #003399;
+}
+
+.span2 {
+  font-family: Arial, Helvetica, sans-serif;
+  transition: all 0.5s ease-in-out;
+}
+
+.span2 h1 {
+  font-size: 40px;
+  color: #3296ff;
+}
+
+.span2 p {
+  font-size: 25px;
+  color: #3296ff;
+}
+
+.span2:hover {
+  background: #3296ff;
+}
+
+.span2:hover * {
+  color: white;
+}
+
+.span3 {
+  font-family: Arial, Helvetica, sans-serif;
+  transition: all 0.5s ease-in-out;
+}
+
+.span3 h1 {
+  font-size: 40px;
+  color: #069b40;
+}
+
+.span3 p {
+  font-size: 25px;
+  color: #069b40;
+}
+
+.span3:hover {
+  background: #069b40;
+}
+
+.span3:hover * {
+  color: white;
+}
+
+.span4 {
+  font-family: Arial, Helvetica, sans-serif;
+  transition: all 0.5s ease-in-out;
+}
+
+.span4 h1 {
+  font-size: 40px;
+  color: #e5288e;
+}
+
+.span4 p {
+  font-size: 25px;
+  color: #e5288e;
+}
+
+.span4:hover {
+  background: #e5288e;
+}
+
+.span4:hover * {
+  color: white;
+}
+
+.span5 {
+  font-family: Arial, Helvetica, sans-serif;
+  transition: all 0.5s ease-in-out;
+}
+
+.span5 h1 {
+  font-size: 40px;
+  color: #0c1825;
+}
+
+.span5 p {
+  font-size: 25px;
+  color: #0c1825;
+}
+
+.span5:hover {
+  background: #0c1825;
+}
+
+.span5:hover * {
+  color: white;
+}
+
+.span6 {
+  font-family: Arial, Helvetica, sans-serif;
+  transition: all 0.5s ease-in-out;
+}
+
+.span6 h1 {
+  font-size: 40px;
+  color: #ff783c;
+}
+
+.span6 p {
+  font-size: 25px;
+  color: #ff783c;
+}
+
+.span6:hover {
+  background: #ff783c;
+}
+
+.span6:hover * {
+  color: white;
+}
+
+.animationcards span a {
+  text-decoration: none;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.animationcards span img {
+  width: 200px;
+  position: absolute;
+  bottom: 10px;
+  left: 100%;
+  transform: translateX(0);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.animationcards span:hover img {
+  opacity: 1;
+  transform: translateX(-4%);
+  left: 50%;
+}
+
+.secondsection {
+  background: white;
+  margin-top: 50px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.secondsection h1 {
+  text-align: center;
+}
+
+.secondsection .secondtext {
+  text-align: center;
+}
+
+.secondsection h1 {
+  font-size: 50px;
+}
+
+.animationcards span h2 {
+  font-size: 40px;
+  color: white;
+}
+
+.invest {
+  color: white;
+  font-size: 30px;
+}
+
+.investext {
+  color: #fed6f1;
+  font-size: 35px;
+}
+
+.secondsection p {
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.secondsection div {
+  background: #7913e5;
+  display: flex;
+  /* gap: 20px; */
+  padding-bottom: 0;
+  padding-top: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 25px;
+}
+
+.secondsection img {
+  width: 400px;
+}
+
+.saverofthemonth {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 60px;
+  text-align: center;
+}
+
+.saverofthemonth h1 {
+  font-size: 50px;
+}
+
+.saverofthemonth p {
+  font-size: 25px;
+}
+
+.saverofthemonth iframe {
+  border: 10px solid white;
+  border-radius: 25px;
+  margin-top: 100px;
+  width: 100%;
+}
+
+.sponsors {
+  margin-top: 20px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.sponsors h4 {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.sponsors div {
+  padding: 10px;
+  gap: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sponsors img {
+  width: 160px;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+footer div {
+  flex-basis: 200px; /* adjust basis for responsiveness */
+  margin: 10px;
+}
+
+.fut1 img {
+  display: block;
+  max-width: 100%; /* make image responsive */
+  height: auto;
+}
+
+.fut2 h4, .fut3 h4, .fut4 h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+.fut2 li, .fut3 li, .fut4 li {
+  list-style-type: none;
+}
+
+.fut2 a, .fut3 a, .fut4 a {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 35px;
+  text-decoration: none;
+  font-size: small;
+  color: black;
+}
+
+.fut2 a:hover, .fut3 a:hover, .fut4 a:hover {
+  color: #0089ff;
+}
+
+.fut5 img {
+  padding: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.fut5 img:hover {
+  cursor: pointer;
+  transform: translateY(-4px);
+}
+
+.fut5 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .saverofthemonth iframe {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .saverofthemonth iframe {
+    height: 200px;
+  }
+}
+
+@media (min-width: 769px) {
+  .saverofthemonth iframe {
+    width: 791px;
+    height: 445px;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 900px) {
+  .introanim h1 {
+    font-size: 30px;
+  }
+
+  .introanim p {
+    font-size: 15px;
+    font-weight: lighter;
+  }
+  .animationcards h1,
+  p {
+    text-align: center;
+  }
+
+  .navlinks {
+    display: none;
+  }
+
+  nav img {
+    width: 100px;
+  }
+
+  main {
+    text-align: center;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .herobanner img {
+    width: 400px;
+  }
+
+  .herotext h1 {
+    font-size: 30px;
+  }
+
+  .herotext p {
+    font-size: 20px;
+    font-weight: lighter;
+  }
+  .store {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  .firstsection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .firstsection img {
+    width: 150px;
+  }
+
+  .animationcards div {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 36px;
+  }
+
+  .animationcards span img {
+    width: 150px;
+  }
+
+  .secondsection div {
+    padding: 6px;
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .secondsection h1,
+  h2,
+  p {
+    text-align: center;
+  }
+
+  .secondsection h1 {
+    font-size: 30px;
+  }
+
+  .secondsection p {
+    font-size: 25px;
+  }
+
+  .animationcards span {
+    width: 300px;
+    height: 300px;
+    background: white;
+    border-radius: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 35px;
+    padding-bottom: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .span1 h1 {
+    font-size: 20px;
+  }
+
+  .span1 p {
+    font-size: 15px;
+  }
+
+  .span2 h1 {
+    font-size: 20px;
+  }
+
+  .span2 p {
+    font-size: 15px;
+    color: #3296ff;
+  }
+
+  .span3 h1 {
+    font-size: 20px;
+  }
+
+  .span3 p {
+    font-size: 15px;
+  }
+
+  .span4 h1 {
+    font-size: 20px;
+  }
+
+  .span4 p {
+    font-size: 15px;
+  }
+
+  .span5 h1 {
+    font-size: 20px;
+  }
+
+  .span5 p {
+    font-size: 15px;
+  }
+
+  .span6 h1 {
+    font-size: 20px;
+  }
+
+  .span6 p {
+    font-size: 15px;
+  }
+
+  .secondsection img {
+    width: 250px;
+  }
+
+  .herobutton {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 50px;
+    gap: 2px;
+    text-align: center;
+    background-color: #0089ff;
+    color: white;
+    border: none;
+    padding: 4px;
+    font-size: 15px;
+    border-radius: 25px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .saverofthemonth h1 {
+    font-size: 30px;
+  }
+
+  .saverofthemonth p {
+    font-size: 20px;
+  }
+
+  .sponsors div {
+    flex-wrap: wrap;
+  }
+
+  .sponsors img {
+    width: 100px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer div {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  .fut5 {
+    text-align: center;
+  }
+}
