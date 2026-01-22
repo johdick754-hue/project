@@ -31,31 +31,156 @@ nav img {
 .navlinks {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 40px;
   font-size: 20px;
 }
 
-.navlinks a {
-  text-decoration: none;
+.nav-links {
   font-family: Arial, Helvetica, sans-serif;
-  color: black;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  position: relative;
 }
 
-.navbuttons button {
-  font-size: 15px;
-  padding: 10px;
+.nav-links a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  position: relative;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown > a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  position: relative;
+}
+
+.dropdown > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #111;
+  transition: width 0.3s ease;
+}
+
+.dropdown:hover > a::after {
+  width: 100%;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+  z-index: 100;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  min-width: 420px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: grid;
+}
+
+.save-menu .dropdown-item {
+  display: flex;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: #111;
   background-color: transparent;
-  border: 1pt solid black;
-  border-radius: 10px;
+  transition: background 0.25s ease;
 }
 
-.navbuttons .button2 {
-  font-size: 15px;
-  padding: 10px;
-  border: 1pt solid black;
+.save-menu .dropdown-item:hover {
+  background: #f5f7fa;
+}
+
+.save-menu img {
+  width: 34px;
+  height: 34px;
+}
+
+.save-menu .item-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.save-menu .item-title {
+  font-weight: 600;
+}
+
+.save-menu .item-desc {
+  font-size: 13px;
+  color: #555;
+  margin-top: 2px;
+}
+
+.resources-menu .dropdown-item {
+  width: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: #111;
+  transition: background 0.25s ease;
+}
+
+.resources-menu .dropdown-item:hover {
+  background: #f5f7fa;
+}
+
+.resources-menu img {
+  width: 22px;
+  height: 22px;
+}
+
+.nav-buttons {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.nav-btn {
+  padding: 12px 22px;
   border-radius: 10px;
-  color: white;
-  background-color: black;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.sign-in {
+  background: #f5f6f8;
+  color: #0c1825;
+  border: 1px solid #0c1825;
+}
+
+.create-account {
+  background: #0c1825;
+  color: #fff;
+  border: none;
 }
 
 main {
@@ -144,11 +269,75 @@ button .flowers {
 }
 
 .macbutton img {
-  width: 25px;
+  width: 20px;
 }
 
 .herobanner img {
-  width: 500px;
+  width: 450px;
+}
+
+.herobanner span {
+  display: block;
+  position: relative;
+  animation: bounce 2s infinite;
+}
+
+.herobanner span:hover {
+  animation-play-state: paused;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.Motherofimg {
+  width: 100%;
+  height: auto;
+  display: block;
+  z-index: 1;
+}
+
+.herobanner img:not(.Motherofimg) {
+  position: absolute;
+  max-width: 35%;
+  height: auto;
+  z-index: 2;
+}
+
+.hero-img {
+  top: 10%;
+  left: -5%;
+}
+
+.slider-img {
+  top: 10%;
+  right: -4%;
+}
+
+.icon-img {
+  top: 40%;
+  left: -5%;
+}
+
+.feature-img {
+  bottom: 45%;
+  right: -1%;
+}
+
+.banner-img {
+  bottom: 10%;
+  left: -10%;
+}
+
+.promo-img {
+  bottom: 9%;
+  right: -4%;
 }
 
 .firstsection {
@@ -158,6 +347,32 @@ button .flowers {
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   gap: 30px;
+}
+
+.firstsection a {
+  color: black;
+   position: relative;
+  text-decoration: none;
+}
+
+.firstsection a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(107, 91, 91, 0.895);
+  transition: width 0.3s ease;
+}
+
+.firstsection a:hover::after {
+  width: 100%;
+}
+
+.bi-arrow-return-right {
+  color: #000;
+  font-weight: 900;
 }
 
 .introanim {
@@ -211,6 +426,13 @@ button .flowers {
 .span1 {
   font-family: Arial, Helvetica, sans-serif;
   transition: all 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* or set a height */
+}
+
+.span1 a {
+  margin-top: auto; /* pushes link to bottom */
 }
 
 .span1:hover {
@@ -223,13 +445,20 @@ button .flowers {
 }
 
 .span1 p {
-  font-size: 25px;
+  font-size: 20px;
   color: #003399;
 }
 
 .span2 {
   font-family: Arial, Helvetica, sans-serif;
   transition: all 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* or set a height */
+}
+
+.span2 a {
+  margin-top: auto; /* pushes link to bottom */
 }
 
 .span2 h1 {
@@ -238,7 +467,7 @@ button .flowers {
 }
 
 .span2 p {
-  font-size: 25px;
+  font-size: 20px;
   color: #3296ff;
 }
 
@@ -253,6 +482,13 @@ button .flowers {
 .span3 {
   font-family: Arial, Helvetica, sans-serif;
   transition: all 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* or set a height */
+}
+
+.span3 a {
+  margin-top: auto; /* pushes link to bottom */
 }
 
 .span3 h1 {
@@ -261,7 +497,7 @@ button .flowers {
 }
 
 .span3 p {
-  font-size: 25px;
+  font-size: 20px;
   color: #069b40;
 }
 
@@ -276,7 +512,15 @@ button .flowers {
 .span4 {
   font-family: Arial, Helvetica, sans-serif;
   transition: all 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* or set a height */
 }
+
+.span4 a {
+  margin-top: auto; /* pushes link to bottom */
+}
+
 
 .span4 h1 {
   font-size: 40px;
@@ -284,7 +528,7 @@ button .flowers {
 }
 
 .span4 p {
-  font-size: 25px;
+  font-size: 20px;
   color: #e5288e;
 }
 
@@ -299,6 +543,13 @@ button .flowers {
 .span5 {
   font-family: Arial, Helvetica, sans-serif;
   transition: all 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* or set a height */
+}
+
+.span5 a {
+  margin-top: auto; /* pushes link to bottom */
 }
 
 .span5 h1 {
@@ -307,7 +558,7 @@ button .flowers {
 }
 
 .span5 p {
-  font-size: 25px;
+  font-size: 20px;
   color: #0c1825;
 }
 
@@ -322,6 +573,13 @@ button .flowers {
 .span6 {
   font-family: Arial, Helvetica, sans-serif;
   transition: all 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* or set a height */
+}
+
+.span6 a {
+  margin-top: auto; /* pushes link to bottom */
 }
 
 .span6 h1 {
@@ -330,7 +588,7 @@ button .flowers {
 }
 
 .span6 p {
-  font-size: 25px;
+  font-size: 20px;
   color: #ff783c;
 }
 
@@ -342,10 +600,25 @@ button .flowers {
   color: white;
 }
 
-.animationcards span a {
+.animationcards a {
+  color: black;
+   position: relative;
   text-decoration: none;
-  font-size: 15px;
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+.animationcards a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(107, 91, 91, 0.895);
+  transition: width 0.3s ease;
+}
+
+.animationcards a:hover::after {
+  width: 100%;
 }
 
 .animationcards span img {
@@ -384,6 +657,36 @@ button .flowers {
 
 .secondsection h1 {
   font-size: 50px;
+}
+
+.secondsection a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.secondsection a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 5px;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.815);
+  transition: width 0.3s ease;
+}
+
+.secondsection a:hover::after {
+  width: 100%;
+}
+
+
+.secondsection .bi-arrow-return-right {
+  position: relative;
+  color: white;
+  font-weight: 900;
 }
 
 .animationcards span h2 {
@@ -468,6 +771,157 @@ button .flowers {
   width: 160px;
 }
 
+.section5 {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+  max-width: 1000px;
+  width: 90%;
+  margin-top: 100px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-evenly;
+}
+
+/* ===== Testimony Card ===== */
+.testimony {
+  width: 100%;
+  max-width: 400px;
+  max-height: 360px;
+  background-color: #f2f7f8;
+  border: 10px solid #0c1926;
+  border-bottom: 0;
+  border-radius: 45px 45px 0 0;
+  overflow: hidden;
+}
+
+.person {
+  background-color: #ffffff;
+  width: 360px;
+  border-radius: 20px;
+  font-size: 13px;
+  padding: 20px;
+  margin-top: 20px;
+  animation: scroll 30s linear infinite;
+}
+
+.person img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.person a {
+  text-decoration: none;
+  color: #8f8f8f;
+  font-size: 12px;
+  display: block;
+  text-align: center;
+}
+
+.person h6 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #122231;
+}
+
+.person p {
+  font-size: 12px;
+  text-align: justify;
+  color: #606f7d;
+}
+
+.pro {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-300px);
+  }
+}
+
+/* ===== Avatar Stack ===== */
+.them {
+  display: flex;
+  align-items: center;
+}
+
+.them .five {
+  width: 50px;
+  height: 50px;
+  margin-left: -12px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.them .five:first-child {
+  margin-left: 0;
+}
+
+.them .five img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.them .five:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+/* ===== Last Circle (5m+) ===== */
+.them .five:last-child {
+  background: #fff;
+  color: #3d4f60;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== Text & Buttons ===== */
+.h {
+  margin: 40px 0;
+}
+
+.h h6 {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.why button {
+  background: #f2f7f8;
+  border: 1px solid #dedede;
+  border-radius: 10px;
+  height: 45px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 0 15px;
+  cursor: pointer;
+}
+
+.why img {
+  width: 20px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.it {
+  align-content: center;
+}
+
 footer {
   display: flex;
   flex-wrap: wrap;
@@ -486,16 +940,22 @@ footer div {
   height: auto;
 }
 
-.fut2 h4, .fut3 h4, .fut4 h4 {
+.fut2 h4,
+.fut3 h4,
+.fut4 h4 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
 }
 
-.fut2 li, .fut3 li, .fut4 li {
+.fut2 li,
+.fut3 li,
+.fut4 li {
   list-style-type: none;
 }
 
-.fut2 a, .fut3 a, .fut4 a {
+.fut2 a,
+.fut3 a,
+.fut4 a {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 35px;
   text-decoration: none;
@@ -503,7 +963,9 @@ footer div {
   color: black;
 }
 
-.fut2 a:hover, .fut3 a:hover, .fut4 a:hover {
+.fut2 a:hover,
+.fut3 a:hover,
+.fut4 a:hover {
   color: #0089ff;
 }
 
@@ -520,6 +982,25 @@ footer div {
 .fut5 {
   font-family: Arial, Helvetica, sans-serif;
   text-align: right;
+}
+
+.footer-bottom {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 40px;
+  margin-top: 50px;
+  font-size: 12px;
+  color: #777;
+}
+
+.footer-bottom h6 {
+  font-size: 12px;
+  font-weight: 100;
+}
+
+.footer-bottom p {
+  color: rgb(67, 67, 223);
 }
 
 @media (max-width: 768px) {
@@ -565,7 +1046,7 @@ footer div {
     text-align: center;
   }
 
-  .navlinks {
+  .nav-links {
     display: none;
   }
 
@@ -583,7 +1064,7 @@ footer div {
   }
 
   .herobanner img {
-    width: 400px;
+    width: 300px;
   }
 
   .herotext h1 {
@@ -622,6 +1103,10 @@ footer div {
 
   .animationcards span img {
     width: 150px;
+  }
+
+  .section5 {
+    flex-wrap: wrap;
   }
 
   .secondsection div {
@@ -742,7 +1227,6 @@ footer div {
   .sponsors img {
     width: 100px;
   }
-
 }
 
 @media (max-width: 768px) {
